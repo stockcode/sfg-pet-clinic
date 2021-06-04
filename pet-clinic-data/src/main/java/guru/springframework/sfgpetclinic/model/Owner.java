@@ -1,12 +1,16 @@
 package guru.springframework.sfgpetclinic.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "owners")
 public class Owner extends Person{
@@ -22,4 +26,5 @@ public class Owner extends Person{
 
     @Column(name = "telephone")
     private String telephone;
+
 }
